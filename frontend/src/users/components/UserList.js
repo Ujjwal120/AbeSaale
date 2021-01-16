@@ -9,7 +9,7 @@ const UserList = (props) => {
         </div>;
     }
 
-    return <div className = "row">
+    return <div className = "row remove-margin">
         {
             props.items.map( user => {
                 return <UserItem key = {user.id} 

@@ -5,21 +5,21 @@ import NewPost from './feed/pages/NewPost';
 
 const App = () => {
   return ( 
-    <Router>
-      <Switch>
+      <Router>
+        <Switch>
 
-        <Route path = "/" exact> 
-          <Users />
-        </Route>
+          <Route path = "/" exact> 
+            <Users />
+          </Route>
 
-        <Route path = "/feed/new" exact>
-          <NewPost />
-        </Route>
+          <Route path = "/feed/new" exact>
+            <NewPost />
+          </Route>
 
-        <Redirect to = "/" />
+          <Redirect to = "/" />
       
-      </Switch>
-    </Router>
+        </Switch>
+      </Router>
   );
 }
 
