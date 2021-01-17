@@ -5,12 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(-45deg, #a06d66, #b49471, #b8ad69, #81ac83, #5c6a96, #a26bad);
-  background-size: 300% 600%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
-  padding: 1.2%;
 }
 
 code {
@@ -18,7 +12,7 @@ code {
     monospace;
 }
 
-.paused {
+/* .paused {
   -webkit-animation-play-state: paused; 
   animation-play-state: paused;
 }
@@ -57,9 +51,9 @@ code {
   100% {
       background-position: 0% 50%
   }
-}
+} */
 
-@media(max-width : 800px) {
+/* @media(max-width : 800px) {
    body {
     background: linear-gradient( 90deg, #e74382, #2bbaee);
     background-size: 200% 600%;
@@ -67,4 +61,4 @@ code {
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
    }
-}
+} */

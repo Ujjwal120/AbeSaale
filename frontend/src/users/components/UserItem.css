@@ -1,8 +1,9 @@
 .user-item {
     list-style-type: none;
-    height: 550px;
+    height: 500px;
     text-align: center;
-    padding : 40px 25px;
+    padding : 40px;
+    z-index: 1;
 }
 
 a {
@@ -21,23 +22,46 @@ img {
 }
 
 .inner-div {
-    z-index: 0;
+    z-index: 1;
     background-color: aliceblue;
     position: relative;
     border-radius: 20px;
-    height : 470px;
-    box-shadow: 0 0 0 1px #b4b5b6;
+    height : 400px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.inner-div :hover {
-    z-index: 1;
-    box-shadow: 0 8px 50px rgba(#000, 0.2);
-    transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+.inner-div::after{
+    content: "";
+    border-radius: 20px;
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow :
+    /* inset 0 0 50px #fff,      */
+    /* inset 20px 0 80px #f0f,   
+    inset -20px 0 80px #0ff,  
+    inset 20px 0 300px #f0f, 
+    inset -20px 0 300px #0ff,  */
+    0 0 8px #fff,        
+    -4px 0 32px #f0f,        
+    4px 0 32px #0ff;
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6 cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.user-item :hover {
-    transform: scale(1.04);
-    overflow: hidden;
+.inner-div:hover{
+    -webkit-transform: scale(1.04, 1.04);
+    transform: scale(1.04, 1.04);
+}
+
+.inner-div:hover::after{
+    opacity: 1;
 }
 
 figure {
@@ -63,5 +87,5 @@ figure {
 }
 
 .ye {
-    box-shadow: 0 0 0 1px #01131d;
+    padding : 0 30px;
 }
