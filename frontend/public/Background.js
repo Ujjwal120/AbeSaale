@@ -131,10 +131,11 @@ Setup
 var canvas;
 
 function setup() {
-  console.log(document.documentElement.scrollHeight)
-  canvas = createCanvas(windowWidth, document.documentElement.scrollHeight)
+  // console.log(document.body.scrollHeight)
+  canvas = createCanvas(windowWidth, windowHeight)
   background('grey');
-  canvas.position(0,0)
+  canvas.position(0,0,'fixed')
+  canvas.style('z-index', '-1')
   for (let i = 0; i < opt.particles; i++) {
     Particles.push(new Particle(Math.random() * width, Math.random() * height))
   }
@@ -160,6 +161,5 @@ function draw() {
 Resize
 --------------------*/
 function windowResized() {
-  console.log("window")
   resizeCanvas(windowWidth, windowHeight)
 }

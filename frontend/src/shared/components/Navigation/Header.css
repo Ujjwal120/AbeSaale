@@ -1,0 +1,16 @@
+.helo {
+    height : 4rem;
+    line-height: 4rem;
+    font-size: 20px;
+    justify-content: center;
+    z-index : 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    color: aliceblue;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    /* opacity: 0.5; */
+    /* position: fixed; */
+}
