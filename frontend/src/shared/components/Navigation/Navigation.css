@@ -55,11 +55,11 @@
 }
 
 .gradient-border {
-    top : 10px;
+    top: 10px;
     --border-width: 3px;
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 1), rgba(44, 44, 44, 1));
-    border-radius: var(--border-width);
+    border-radius: cal(2 * var(--border-width));
     width: 80px;
     height: 70px;
     display: flex;
@@ -89,7 +89,7 @@
     background-size: 300% 300%;
     background-position: 0 50%;
     /* border-radius: var(--border-width); */
-    border-radius: calc(2 * var(--border-width));
+    border-radius: calc(4 * var(--border-width));
     animation: moveGradient 4s alternate infinite;
   }
   

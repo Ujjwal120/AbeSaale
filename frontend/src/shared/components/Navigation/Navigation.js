@@ -11,7 +11,7 @@ const Navigation = () => {
                 <div className = "gradient-border">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="78" height="62"
+                        width="78" height="60"
                         viewBox="0 0 20.6375 17.991666">
                         <g
                             id="layer1"
