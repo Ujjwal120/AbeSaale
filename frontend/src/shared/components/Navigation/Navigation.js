@@ -8,9 +8,8 @@ const Navigation = () => {
         <Header>
             {/* Logo NW */}
             <div className = "inge-lao">
-                <div>
+                <div className = "gradient-border">
                     <svg
-                        className = "border-lagao"
                         xmlns="http://www.w3.org/2000/svg"
                         width="78" height="62"
                         viewBox="0 0 20.6375 17.991666">
