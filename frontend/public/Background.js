@@ -133,7 +133,7 @@ var canvas;
 function setup() {
   // console.log(document.body.scrollHeight)
   canvas = createCanvas(windowWidth, windowHeight)
-  background('grey');
+  background('black');
   canvas.position(0,0,'fixed')
   canvas.style('z-index', '-1')
   for (let i = 0; i < opt.particles; i++) {
@@ -148,7 +148,7 @@ Draw
 --------------------*/
 function draw() {
   time++
-  background(22, 100-opt.tail)
+  background(15, 100-opt.tail)
   
   for (let p of Particles) {
     p.update()

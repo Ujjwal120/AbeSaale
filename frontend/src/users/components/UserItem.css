@@ -23,6 +23,7 @@ img {
 
 .inner-div {
     z-index: 0;
+    border: 2px solid aliceblue;
     background-color: aliceblue;
     position: relative;
     border-radius: 20px;

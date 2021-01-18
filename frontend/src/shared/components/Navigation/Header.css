@@ -7,9 +7,10 @@
     top: 0;
     left: 0;
     position: fixed;
-    color: black;
+    /* color: black; */
     display: inline-block;
-    background-color : rgb(12, 12, 12);
+    /* background-color : rgb(12, 12, 12); */
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(44, 44, 44, 1));
     width: 100%;
 }
 

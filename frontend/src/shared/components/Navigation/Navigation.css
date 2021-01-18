@@ -58,14 +58,13 @@
     top : 10px;
     --border-width: 3px;
     position: relative;
-    background: rgb(12, 12, 12);
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(44, 44, 44, 1));
     border-radius: var(--border-width);
     width: 80px;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* z-index: 1; */
   }
 
   .gradient-border::after {
