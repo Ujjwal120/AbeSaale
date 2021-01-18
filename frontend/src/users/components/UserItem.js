@@ -31,7 +31,7 @@ const UserItem = (props) => {
                     <Link to = {`/${props.id}/places`} >
                         <div className = "image">
                             <figure>
-                                <img src = {props.image} alt = {props.name} />
+                                <img src = {process.env.PUBLIC_URL + props.image} alt = {props.name} />
                             </figure>   
                             <div style = {style}> {props.postcount} </div>
                             <div style = {style}> {props.name} </div>

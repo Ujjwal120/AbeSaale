@@ -1,8 +1,6 @@
 import React from 'react';
 import UserList from '../components/UserList';
-import i from '../../images/1.png';
-import j from '../../images/2.png';
-import k from '../../images/3.png';
+
 // import AnimBack from '../../shared/components/AnimBack';
 
 const Users = () => {
@@ -10,37 +8,37 @@ const Users = () => {
         {
             id : 'u1',
             name : 'Ujju',
-            image : i,
+            image : '/images/1.png',
             posts : 2
         },
         {
             id : 'u2',
             name : 'Vipul',
-            image : j,
+            image : '/images/2.png',
             posts : 3
         },
         {
             id : 'u3',
             name : 'Chaitu',
-            image : k,
+            image : '/images/3.png',
             posts : 3
         },
         {
             id : 'u4',
             name : 'Utsav',
-            image : i,
+            image : '/images/1.png',
             posts : 1 
         },
         {
             id : 'u5',
             name : 'Vipul',
-            image : j,
+            image : '/images/1.png',
             posts : 3
         },
         {
             id : 'u6',
             name : 'Chaitu',
-            image : k,
+            image : '/images/1.png',
             posts : 3
         }
         

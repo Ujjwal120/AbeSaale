@@ -1,16 +1,15 @@
 .helo {
-    height : 4rem;
-    line-height: 4rem;
-    font-size: 20px;
-    justify-content: center;
+    padding : 0 20px;
+    height : 5rem;
+    line-height: 5rem;
+    font-size: 18px;
     z-index : 1;
     top: 0;
     left: 0;
     position: fixed;
-    color: aliceblue;
-    display: flex;
-    background-color: black;
+    color: black;
+    display: inline-block;
+    background-color : rgb(12, 12, 12);
     width: 100%;
-    /* opacity: 0.5; */
-    /* position: fixed; */
 }
+
