@@ -25,18 +25,20 @@ const UserItem = (props) => {
     const style = { color : 'black' }
 
     return (
-        <div className = "col-md-3 user-item hover03" >
+        <div className = "col-md-4 user-item hover03" >
             <div className = "ye">
                 <div className = "inner-div">
-                    <Link to = {`/${props.id}/places`} >
-                        <div className = "image">
-                            <figure>
-                                <img src = {process.env.PUBLIC_URL + props.image} alt = {props.name} />
-                            </figure>   
-                            <div style = {style}> {props.postcount} </div>
-                            <div style = {style}> {props.name} </div>
-                        </div>
-                    </Link>
+                    <div className = "isko-bhi">
+                        <Link to = {`/${props.id}/posts`} >
+                            <div className = "image">
+                                <figure>
+                                    <img src = {process.env.PUBLIC_URL + props.image} alt = {props.name} />
+                                </figure>   
+                                <div style = {style}> {props.postcount} </div>
+                                <div style = {style}> {props.name} </div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

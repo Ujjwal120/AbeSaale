@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = (props) => {
     return (
-        <header className = "helo"> {props.children} </header>
+        <header className = "gradient-border"> {props.children} </header>
     );
 }
 

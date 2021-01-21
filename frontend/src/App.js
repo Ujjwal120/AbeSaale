@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
 import Users from './users/pages/Users';
-import NewPost from './feed/pages/NewPost';
+import Newpost from './feed/pages/Newpost';
 import Navigation from './shared/components/Navigation/Navigation';
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
             </Route>
 
             <Route path = "/feed/new" exact>
-              <NewPost />
+              <Newpost />
             </Route>
 
             <Redirect to = "/" />

@@ -2,8 +2,6 @@
 Vars
 --------------------*/
 
-
-
 const deg = (a) => Math.PI / 180 * a
 const rand = (v1, v2) => Math.floor(v1 + Math.random() * (v2 - v1))
 const opt = {
@@ -133,13 +131,13 @@ var canvas;
 function setup() {
   // console.log(document.body.scrollHeight)
   canvas = createCanvas(windowWidth, windowHeight)
-  background('black');
-  canvas.position(0,0,'fixed')
+  canvas.position(0, 0,'fixed')
   canvas.style('z-index', '-1')
   for (let i = 0; i < opt.particles; i++) {
     Particles.push(new Particle(Math.random() * width, Math.random() * height))
   }
   strokeWeight(opt.strokeWeight)
+  background('#000000');
 }
 
 
@@ -148,8 +146,6 @@ Draw
 --------------------*/
 function draw() {
   time++
-  background(15, 100-opt.tail)
-  
   for (let p of Particles) {
     p.update()
     p.render()
@@ -161,5 +157,7 @@ function draw() {
 Resize
 --------------------*/
 function windowResized() {
+  // centerCanvas();
   resizeCanvas(windowWidth, windowHeight)
+  background('#000000');
 }

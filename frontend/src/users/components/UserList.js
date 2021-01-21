@@ -1,22 +1,38 @@
 import React from 'react';
+
 import './UserList.css';
 import UserItem from './UserItem';
+import Card from "../../shared/components/UI/Card"
 
 const UserList = (props) => {
+    let style = {
+        height : "700px"
+    }
+
     if(props.items.length === 0) {
-        return  <div className = "center"> 
-            <h2> No Users found </h2>
+        return  <div style = {style}>
+            <Card> 
+                <h2> No Users found </h2>
+            </Card>
         </div>;
     }
 
-    return <div className = "row remove-margin">
+    style = {
+        // .remove-margin {
+        marginLeft: "0px",
+        marginRight: "0px",
+        textAlign: "center"
+        // }
+    }
+
+    return <div style = {style} className = "row">
         {
             props.items.map( user => {
                 return <UserItem key = {user.id} 
-                id = {user.id} 
-                image = {user.image}
-                name = {user.name}
-                postcount = {user.posts}
+                    id = {user.id} 
+                    image = {user.image}
+                    name = {user.name}
+                    postcount = {user.posts}
                 />
             })
         }

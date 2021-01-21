@@ -1,7 +1,20 @@
 import React  from 'react';
 
-const NewPost = () => {
-    return <h1> Posted ! </h1>;
+import './Newpost.css'
+import Card from '../../shared/components/UI/Card';
+
+const Newpost = (props) => {
+    const style = {
+        height : "700px"
+    }
+
+    return (
+        <div style = {style}>
+           <Card>
+                <h1>Posted !</h1> 
+           </Card> 
+        </div>
+    );
 }
 
-export default NewPost;
+export default Newpost;

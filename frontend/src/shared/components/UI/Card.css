@@ -1,13 +1,21 @@
-.gradient-border {
-    height : 4rem;
-    line-height: 2.7rem;
-    top: 0;
-    opacity: 1;
-    --border-width: 2.9px;
-    position: fixed;
-    border-radius: calc(2*var(--border-width));
+.lagao-ise {
+    /* height: 700px; */
     display: flex;
     width: 100%;
+    height: 100%;
+    color: aliceblue;
+}
+
+.g-b {
+    opacity: 1;
+    --border-width: 2.9px;
+    position: relative;
+    display: flex;
+    border-radius: calc(2*var(--border-width));
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
     background: linear-gradient(
       90deg,
@@ -23,11 +31,9 @@
     background-size: 300% 300%;
     background-position: 0 50%;
     animation: moveGradient 4s alternate infinite;
-    justify-content: center;
-    align-items: center;
   }
 
-  .gradient-border::after {
+  .g-b::after {
     position: absolute;
     background: #242424;
     content: "";

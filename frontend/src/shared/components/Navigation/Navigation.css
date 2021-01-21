@@ -1,107 +1,81 @@
 .inge-lao {
-    float: left;
+  /* float: left; */
+  padding: 0 25px;
 }
 
 .unge-lejao {
-    float: right;
-    padding: 0 25px;
+  /* float: right; */
+  padding: 0 25px;
+}
+
+.zara-theek-krna {
+    cursor: pointer;
+    display: flex;
+    /* justify-content: center; */
 }
 
 
 .anim-N-1{
-    -webkit-animation: Change1 2s infinite ease-in ;
-    animation: Change1 2s infinite ease;
+    -webkit-animation: Change1 4s infinite ease-in ;
+    animation: Change1 4s infinite ease;
 }
 
 .anim-N-2{
-    -webkit-animation: Change2 2s infinite ease-in ;
-    animation: Change2 2s infinite ease;
+    -webkit-animation: Change2 4s infinite ease-in ;
+    animation: Change2 4s infinite ease;
 }
 
 @-webkit-keyframes Change1 {
-    from {
+    0% {
         fill: #ffffff;
     }
-    to {
+    50% {
         fill: #d40000;
+    }
+    100% {
+      fill: #ffffff;
     }
 }
 
 @keyframes Change1 {
-    from {
+    0% {
         fill: #ffffff;
     }
-    to {
+    50% {
         fill: #d40000;
+    }
+    100%{
+        fill: #ffffff;
     }
 }
 
 @-webkit-keyframes Change2 {
-    from {
+    0% {
         fill: #d40000;
     }
-    to {
+    50% {
         fill: #ffffff;
+    }
+    100%{
+      fill: #d40000;
     }
 }
 
 @keyframes Change2 {
-    from {
-        fill: #d40000;
-    }
-    to {
-        fill: #ffffff;
-    }
+  0% {
+      fill: #d40000;
+  }
+  50% {
+      fill: #ffffff;
+  }
+  100%{
+    fill: #d40000;
+  }
 }
 
-.gradient-border {
-    top: 10px;
-    --border-width: 3px;
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(44, 44, 44, 1));
-    border-radius: cal(2 * var(--border-width));
-    width: 80px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .gradient-border::after {
-    position: absolute;
-    content: "";
-    top: calc(-1 * var(--border-width));
-    left: calc(-1 * var(--border-width));
-    z-index: -1;
-    width: calc(100% + var(--border-width) * 2);
-    height: calc(100% + var(--border-width) * 2);
-    background: linear-gradient(
-      60deg,
-      hsl(224, 85%, 66%),
-      hsl(269, 85%, 66%),
-      hsl(314, 85%, 66%),
-      hsl(359, 85%, 66%),
-      hsl(44, 85%, 66%),
-      hsl(89, 85%, 66%),
-      hsl(134, 85%, 66%),
-      hsl(179, 85%, 66%)
-    );
-    background-size: 300% 300%;
-    background-position: 0 50%;
-    /* border-radius: var(--border-width); */
-    border-radius: calc(4 * var(--border-width));
-    animation: moveGradient 4s alternate infinite;
-  }
-  
-  @keyframes moveGradient {
-    50% {
-      background-position: 100% 50%;
-    }
-  }  
-
 .hvr-icon-bounce {
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block; */
+    /* vertical-align: middle; */
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -118,12 +92,44 @@
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  .hvr-icon-bounce:hover .hvr-icon, .hvr-icon-bounce:focus .hvr-icon, .hvr-icon-bounce:active .hvr-icon {
+
+  .hvr-icon-bounce:hover .hvr-icon,.hvr-icon-bounce:focus .hvr-icon, .hvr-icon-bounce:active .hvr-icon {
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
+
+  .halo{
+    -webkit-animation: C 3.5s infinite ease-in ;
+    animation: C 3.5s infinite ease;
+  }
+
+  @keyframes C {
+    0% {
+      fill : white;
+    }
+    50% {
+      fill : grey; 
+    }
+    100% {
+      fill: white;
+    }
+  }
+
+  @-webkit-keyframes C {
+    0% {
+      fill : white;
+    }
+    50% {
+      fill : grey; 
+    }
+    100% {
+      fill: white;
+    }
+  }
+
+
 
   @-webkit-keyframes hvr-icon-buzz {
     50% {
@@ -146,8 +152,8 @@
     }
   }
   .hvr-icon-buzz {
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block; */
+    /* vertical-align: middle; */
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -199,8 +205,8 @@
   }
   /* Icon Drop */
   .hvr-icon-drop {
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block; */
+    /* vertical-align: middle; */
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
