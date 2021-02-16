@@ -35,7 +35,7 @@
 
   .g-b::after {
     position: absolute;
-    background: #242424;
+    background: #100e17;
     content: "";
     top: calc(var(--border-width));
     left: calc(var(--border-width));
