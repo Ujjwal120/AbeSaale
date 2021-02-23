@@ -8,7 +8,7 @@ const EachRow = (props) => {
         {
             props.row.map(post => {
                 return <EachPost 
-                    key = {post.id} 
+                    key = {post.ind} 
                     id = {post.id}
                     image = {post.image}
                     caption = {post.caption}

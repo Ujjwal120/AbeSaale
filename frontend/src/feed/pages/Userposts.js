@@ -70,7 +70,6 @@ const Userposts = () => {
         post['ind'] = i;
         i++;
     });
-    // console.log(loadposts);
     
     return <FeedGroup items = {loadposts} />;
 }

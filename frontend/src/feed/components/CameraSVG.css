@@ -1,0 +1,42 @@
+.baahar {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.photu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    position: absolute;
+}
+
+.mid-baahar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-left{
+    flex: 50%;
+}
+
+.top-right {
+    flex: 50%;
+    text-align: right;
+}
+
+.bottom-left {
+    flex: 50%;
+}
+
+.bottom-right {
+    flex: 50%;
+    text-align: right;
+}

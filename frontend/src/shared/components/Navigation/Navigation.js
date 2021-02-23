@@ -150,7 +150,7 @@ const Navigation = () => {
                 </div>
 
                 {/* places icon  */}
-                <NavLink to = "/u1/posts" exact>
+                <NavLink to = "/testMAP" exact>
                     <div className = "hvr-icon-drop unge-lejao">
                         <div className = "hvr-icon">
                             <svg id="Capa_1" 

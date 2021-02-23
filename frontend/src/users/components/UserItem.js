@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './UserItem.css';
 import { Link } from 'react-router-dom';  // used in place of <a> tag for navigation
 

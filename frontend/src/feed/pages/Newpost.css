@@ -1,0 +1,22 @@
+.svg-space{
+    width : 60%;
+}
+
+.post-anim {
+    display: flex;
+    opacity: 0;
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    transition: opacity 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: opacity 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+}
+
+.post-anim-vis {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+

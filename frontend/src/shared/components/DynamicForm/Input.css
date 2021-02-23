@@ -1,0 +1,112 @@
+.f-c {
+  margin: 1rem 0;
+}
+
+.f-c label,
+.f-c input,
+.f-c textarea {
+  display: block;
+  letter-spacing: 0.12rem;
+  border: 0px;
+}
+
+.f-c label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.f-c input,
+.f-c textarea {
+  border-radius: 4px;
+  width: 100%;
+  font: inherit;
+  height: 2.5rem;
+  color: aliceblue;
+  background: transparent;
+  padding: 0.3rem 0.5rem;
+  animation: well 4s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  -webkit-animation: well 4s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+@keyframes well {
+  0% {
+    caret-color: hsl(224, 85%, 66%);
+  }
+  12.5% {
+    caret-color: hsl(269, 85%, 66%);
+  }
+  25% {
+    caret-color: hsl(314, 85%, 66%);
+  }
+  37.5% {
+    caret-color: hsl(359, 85%, 66%);
+  }
+  50% {
+    caret-color: hsl(44, 85%, 66%);
+  }
+  62.5%{
+    caret-color: hsl(89, 85%, 66%);
+  }
+  75%{
+    caret-color: hsl(134, 85%, 66%);
+  }
+  87.5% {
+    caret-color: hsl(179, 85%, 66%);
+  }
+  100% {
+    caret-color: hsl(224, 85%, 66%);
+  }
+}
+
+@-webkit-keyframes well {
+  0% {
+    caret-color: hsl(224, 85%, 66%);
+  }
+  12.5% {
+    caret-color: hsl(269, 85%, 66%);
+  }
+  25% {
+    caret-color: hsl(314, 85%, 66%);
+  }
+  37.5% {
+    caret-color: hsl(359, 85%, 66%);
+  }
+  50% {
+    caret-color: hsl(44, 85%, 66%);
+  }
+  62.5%{
+    caret-color: hsl(89, 85%, 66%);
+  }
+  75%{
+    caret-color: hsl(134, 85%, 66%);
+  }
+  87.5% {
+    caret-color: hsl(179, 85%, 66%);
+  }
+  100% {
+    caret-color: hsl(224, 85%, 66%);
+  }
+}
+
+
+.f-c--invalid label,
+.f-c--invalid p {
+  color: red;
+}
+
+.f-c--invalid input,
+.f-c--invalid textarea {
+  border-color: red;
+  background: #ffd1d1;
+}
+
+.overlap-svg{
+  width: 100%;
+  height: 2.5rem;
+  top: -2.5rem;
+  position: relative;
+}
+
+.before-svg{
+  stroke-width : 4px;
+}

@@ -5,6 +5,12 @@ import Users from './users/pages/Users';
 import Newpost from './feed/pages/Newpost';
 import Navigation from './shared/components/Navigation/Navigation';
 import Userposts from './feed/pages/Userposts'
+import Sample1 from './shared/components/Sample/Sample1'
+
+const coordinates = {
+  lat : 28.8383372,
+  lng : 78.2418124
+};
 
 const App = () => {
   return ( 
@@ -21,15 +27,17 @@ const App = () => {
               <Newpost />
             </Route>
 
-            <Route path = "/:userId/feed/:hash" exact>
-              {/* <script>console.log("idhar")</script>
-              <Users /> */}
-            </Route>
-
             <Route path = "/:userId/feed" exact>
-            {/* <script>console.log("idhar")</script> */}
               <Userposts />
             </Route>
+
+            <Route path = "/testMAP" exact>
+              <Sample1 center = {coordinates} zoom = {10.56} />
+            </Route>
+
+            {/* <Route path = "/:userId/feed/:num" exact>
+
+            </Route> */}
 
             <Redirect to = "/" />
 

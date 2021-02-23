@@ -14,8 +14,6 @@
     border-radius: calc(2*var(--border-width));
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
     z-index: 1;
     background: linear-gradient(
       90deg,
@@ -33,16 +31,18 @@
     animation: moveGradient 4s alternate infinite;
   }
 
-  .g-b::after {
+  .g-b-next {
     position: absolute;
     background: #100e17;
-    content: "";
     top: calc(var(--border-width));
     left: calc(var(--border-width));
-    z-index: -1;
+    z-index: 1;
     width: calc(100% - var(--border-width) * 2);
     height: calc(100% - var(--border-width) * 2);
     border-radius: calc(2*var(--border-width));  
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   @keyframes moveGradient {

@@ -1,25 +1,28 @@
-import React, { Component }  from 'react';
+import React, { useEffect } from 'react';
 
 import './Newpost.css'
-import Card from '../../shared/components/UI/Card';
+import CameraSVG from '../../feed/components/CameraSVG';
+import Card from '../../shared/components/UI/Card'
+import Postform from '../../shared/components/DynamicForm/Postform'
 
-// import '../../shared/components/Scroll/Scroll.css'
+const Newpost = () => {
 
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelector(".post-anim").classList.add("post-anim-vis");
+        }, 100);
+    });
 
-class Newpost extends Component{
-    render() {
-        const style = {
-            height : "700px"
-        }
-    
-        return (
-            <div style = {style}>
-                <Card>
-                    <h1>Posted !</h1> 
-                </Card> 
-            </div> 
-        );
-    }
+    return <div className = "post-anim">
+        <div className = "svg-space">
+            <CameraSVG />
+        </div>
+        <div style = {{paddingLeft : '3%', width : '40%'}}>
+            <Card style = {{borderRadius : '15px'}}>
+                <Postform />
+            </Card>
+        </div>
+    </div>;
 }
 
 export default Newpost;
