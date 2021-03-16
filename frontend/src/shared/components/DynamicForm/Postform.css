@@ -8,3 +8,36 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 6px;
 }
+
+
+.but:not(:disabled){
+  border: none;
+  outline: none;
+  background-color: transparent;
+  fill: rgb(122, 193, 255);
+  width: 3rem;
+  height : 3rem;
+  right: 2rem;
+  bottom: 2rem;
+  position: absolute;
+  padding: 0px;
+}
+
+.but:not(:disabled):hover{
+  transform : scale(1.2);
+  -webkit-transform : scale(1.2);
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.but:disabled {
+  border: none;
+  outline: none;
+  background: transparent;
+  fill: rgb(110, 110, 110);
+  width: 3rem;
+  height : 3rem;
+  right: 2rem;
+  bottom: 2rem;
+  position: absolute;
+  padding: 0px;
+}

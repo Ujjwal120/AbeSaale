@@ -11,28 +11,28 @@ const FeedGroup = (props) => {
 
     if(props.items.length === 0) {
         return <div style = {style}>
-            <Card>
+            <Card style = {{borderRadius : '15px'}}>
                 <div>Bruh! your <i>Now What</i> game is weak </div>
             </Card>
         </div>
     }
 
-    var cnt = 0;
+    let cnt = 0;
     let rows = [];
-    let groupof4 = [];
+    let groupof3 = [];
     for(let post of props.items) {
         if(cnt === 3) {
-            rows.push(groupof4);
-            groupof4 = [];
-            groupof4.push(post);
+            rows.push(groupof3);
+            groupof3 = [];
+            groupof3.push(post);
             cnt = 0;
         }
         else {
-            groupof4.push(post);
+            groupof3.push(post);
         }
         cnt++;
     }
-    rows.push(groupof4);
+    rows.push(groupof3);
 
     return <React.Fragment>
             {

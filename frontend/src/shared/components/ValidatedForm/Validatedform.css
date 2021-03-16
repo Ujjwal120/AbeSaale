@@ -1,0 +1,223 @@
+.auth-form{
+    width : 100%;
+    height : 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth-form-photo {
+    width: 35%;
+    margin: 1.5%;
+    height: 100%;
+    opacity: 1;
+    transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+                opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: width, opacity;
+  }
+
+  .partition-svg {
+    width : 2.5px;
+    height : 650px; 
+    transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+    opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: width, opacity;
+  }
+
+  .auth-form-photo.invi, .each-form.invi, .partition-svg.invi {
+    width: 0;
+    opacity: 0;
+    padding: 0;
+  }
+  
+  .label-photo {
+    color: aliceblue;
+    height: 30%;
+    transform: rotateZ(-4.5deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type="file"].this-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+
+  .svg-trans {
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      filter: drop-shadow(0 0 0.45rem rgb(173, 173, 173));
+  }
+
+  .svg-trans:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition : transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transform: scale(1.05);
+    -webkit-transition : transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .prof {
+    position: absolute;
+    width: 65%;
+    height: 55%;
+    top: 0;
+    left: 0;
+    transform: translate(36%, 44%);
+  }
+
+  .each-form {
+    width : calc((100%-2.5px)/2);
+    padding: 7.5% 3.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: width 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+    opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: width, opacity;
+  }
+
+  .f-s {
+    display: block;
+    width: 100%;
+    height: 8.45rem;
+  }
+
+  .f-s label,
+  .f-s input,
+  .f-s textarea {
+    letter-spacing: 1px;
+  }
+
+  .f-s input,
+  .f-s textarea {
+    width: 100%;
+    outline : none;
+    color: aliceblue;
+    padding : 0% 2%;
+    font-size: 1rem;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(122, 193, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    animation: well 4s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation: well 4s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  }
+
+  .f-s.border-red input {
+    border-bottom: 2px solid rgb(255, 130, 130);
+  }
+
+  .f-s label {
+    color: rgb(122, 193, 255);
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .f-s input {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  @keyframes well {
+    0% {
+      caret-color: hsl(224, 85%, 66%);
+    }
+    12.5% {
+      caret-color: hsl(269, 85%, 66%);
+    }
+    25% {
+      caret-color: hsl(314, 85%, 66%);
+    }
+    37.5% {
+      caret-color: hsl(359, 85%, 66%);
+    }
+    50% {
+      caret-color: hsl(44, 85%, 66%);
+    }
+    62.5%{
+      caret-color: hsl(89, 85%, 66%);
+    }
+    75%{
+      caret-color: hsl(134, 85%, 66%);
+    }
+    87.5% {
+      caret-color: hsl(179, 85%, 66%);
+    }
+    100% {
+      caret-color: hsl(224, 85%, 66%);
+    }
+  }
+  
+  @-webkit-keyframes well {
+    0% {
+      caret-color: hsl(224, 85%, 66%);
+    }
+    12.5% {
+      caret-color: hsl(269, 85%, 66%);
+    }
+    25% {
+      caret-color: hsl(314, 85%, 66%);
+    }
+    37.5% {
+      caret-color: hsl(359, 85%, 66%);
+    }
+    50% {
+      caret-color: hsl(44, 85%, 66%);
+    }
+    62.5%{
+      caret-color: hsl(89, 85%, 66%);
+    }
+    75%{
+      caret-color: hsl(134, 85%, 66%);
+    }
+    87.5% {
+      caret-color: hsl(179, 85%, 66%);
+    }
+    100% {
+      caret-color: hsl(224, 85%, 66%);
+    }
+  }
+
+.toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(-1);
+}
+
+.toggle.shift-Y {
+  transform : scaleX(1);
+  will-change: transform;
+}
+
+.blue-col {
+  color: rgb(122, 193, 255);
+}
+
+.red-col {
+  color:rgb(255, 130, 130)
+}
+
+#but:disabled {
+  filter : blur(2px)
+}
+
+#but:not(:disabled):hover {
+  transform: scale(1.06);
+  transition : transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

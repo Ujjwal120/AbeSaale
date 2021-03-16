@@ -14,7 +14,6 @@
     border-radius: calc(2*var(--border-width));
     width: 100%;
     height: 100%;
-    z-index: 1;
     background: linear-gradient(
       90deg,
       hsl(224, 85%, 66%),
@@ -33,10 +32,10 @@
 
   .g-b-next {
     position: absolute;
-    background: #100e17;
+    background: #202022;
     top: calc(var(--border-width));
     left: calc(var(--border-width));
-    z-index: 1;
+    z-index: 0;
     width: calc(100% - var(--border-width) * 2);
     height: calc(100% - var(--border-width) * 2);
     border-radius: calc(2*var(--border-width));  

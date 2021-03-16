@@ -1,9 +1,73 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import ReactDOM from 'react-dom';
 
 import './CameraSVG.css';
+import Imageloader from './Imageloader';
+import Backdrop from '../../shared/components/UI/Backdrop';
+import Modal from '../../shared/components/UI/Modal';
 
-const CameraSVG = () => {
-    return <div className = "baahar"> 
+
+const CameraSVG = (props) => {
+    const [Loaderstate, setLoaderstate] = useState(false);
+
+    let ele = useRef(null);
+    let orig_img_src = useRef('');
+
+    useEffect(() => {
+        if(props.imageEditor) ele.current = document.getElementById('inside-post-it').classList;
+        if(Loaderstate) 
+            orig_img_src.current = document.querySelectorAll('.lower-canvas')[0].toDataURL('image/jpeg', 0.40);
+    });
+
+    const OpenLoader = () => {
+        ele.current.add('nah-down');
+        setLoaderstate(true);
+    };
+
+    const CloseLoader = () => {
+        ele.current.remove('nah-down');
+        setLoaderstate(false);
+    };
+
+    const postHandler = () => {
+        let img_src = document.querySelectorAll('.lower-canvas')[0].toDataURL('image/jpeg', 0.40);
+        if(img_src === orig_img_src.current) {
+            CloseLoader();
+            return;
+        }
+
+        orig_img_src.current = img_src;
+        let img = new Image();
+        img.id = 'my-post-image'; img.src = img_src; img.className = 'to-image';
+        document.querySelectorAll('.mid-baahar-padding')[0].appendChild(img);
+        props.onPost(true, img_src);
+        CloseLoader();
+    };
+    
+    return <>
+
+        {props.imageEditor && ReactDOM.createPortal(
+            <div id = "inside-post-it" className = "move-up" onClick = {postHandler} style = {{position : 'absolute', top : '45vh', left : '85%', zIndex : '3'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" >
+                    <defs>
+                        <linearGradient id="Gradient" y1="0.44999999" spreadMethod="reflect">
+                        <stop offset="0%" stopColor="#5f86f2" stopOpacity={1}>
+                            <animate attributeName="stop-color" values="#5f86f2; #a65ff2; #f25fd0; #f25f61; #f2cb5f; #abf25f; #5ff281; #5ff2f0; #5f86f2" dur="3s" repeatCount="indefinite" />
+                        </stop>
+                        <stop offset="100%" stopColor="#5f86f2" stopOpacity={1}>
+                            <animate attributeName="stop-color" values="#5f86f2; #5ff2f0; #5ff281; #abf25f; #f2cb5f; #f25f61; #f25fd0; #a65ff2; #5f86f2" dur="3s" repeatCount="indefinite" />
+                        </stop>
+                        </linearGradient>
+                    </defs>
+                    <path style = {{ fill : 'url(#Gradient)', zIndex : '2'}} d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1.429 6l-5.144 8h3.21l-1.495 4 6-7h-3.896l1.325-5z"/>
+                </svg>
+            </div> , document.getElementById('post-it'))}
+
+        { props.imageEditor && Loaderstate &&  <Backdrop onClick = {CloseLoader}/> }
+        { props.imageEditor && Loaderstate && <Modal className = "modal-vis"><Imageloader /></Modal>}
+        
+
+        <div className = "baahar"> 
         <div className = "photu">
             <div className = "top-left">
                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="77" viewBox="0 0 27.902015 27.078839">
@@ -86,8 +150,11 @@ const CameraSVG = () => {
             </div>
         </div>
 
-        <div className = "mid-baahar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="55" viewBox="0 0 26.91383 22.616644">
+        <div className = "mid-baahar" >     
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="55" viewBox="0 0 26.91383 22.616644"
+                className = "svg-zoom"
+                onClick = {OpenLoader}
+                >
                 <defs>
                     <linearGradient id="Gradient" y1="0.44999999" spreadMethod="reflect">
                     <stop offset="0%" stopColor="#5f86f2" stopOpacity={1}>
@@ -109,7 +176,11 @@ const CameraSVG = () => {
             </svg>
         </div>
 
-    </div>;
+        <div className = "mid-baahar-padding">
+            { props.show && !props.imageEditor && <img src = {props.src} alt = "none" style = {{ zIndex : 1, objectFit : 'contain'}}/>}
+        </div>
+    </div>
+    </>;
 }
 
 export default CameraSVG;

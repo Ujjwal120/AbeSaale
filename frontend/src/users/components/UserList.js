@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './UserList.css';
 import UserItem from './UserItem';
 import Card from "../../shared/components/UI/Card"
 
@@ -11,7 +10,7 @@ const UserList = (props) => {
 
     if(props.items.length === 0) {
         return  <div style = {style}>
-            <Card> 
+            <Card style = {{borderRadius : '15px'}}> 
                 <h2> No Users found </h2>
             </Card>
         </div>;

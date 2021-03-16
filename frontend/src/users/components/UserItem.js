@@ -22,7 +22,7 @@ const UserItem = (props) => {
     //     }
     // }
 
-    const style = { color : 'black' }
+    const style = { color : 'aliceblue' }
 
     return (
         <div className = "col-md-4 user-item hover03" >
@@ -30,14 +30,11 @@ const UserItem = (props) => {
             <div className = "ye">
                 <div className = "inner-div">
                     <div className = "isko-bhi">
-                        
-                            <div className = "image">
-                                <figure>
-                                    <img src = {process.env.PUBLIC_URL + props.image} alt = {props.name} />
-                                </figure>   
-                                <div style = {style}> {props.postcount} </div>
-                                <div style = {style}> {props.name} </div>
-                            </div>
+                        <figure>
+                            <img src = {process.env.PUBLIC_URL + props.image} alt = {props.name} style = {{borderRadius : '100%', border : '1.6px solid aliceblue'}}/>
+                        </figure>   
+                        <div style = {style}> {props.postcount} </div>
+                        <div style = {style}> {props.name} </div>
                     </div>
                 </div>
             </div>

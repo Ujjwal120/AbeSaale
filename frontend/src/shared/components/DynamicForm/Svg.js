@@ -1,23 +1,18 @@
 import React, { useEffect } from 'react';
 
-import './Svg.css'
 
 const Svg = (props) => {
 
     const here_id = `my-svg-${props.id}`;
 
     useEffect(() => {
-        const timer = setTimeout(() => {
 
-            var rect = document.getElementById(here_id);
+            let rect = document.getElementById(here_id);
 
             const w = rect.width.baseVal.value;
             const h = rect.height.baseVal.value;
 
-            rect.setAttribute('style', `stroke : ${props.color}; stroke-width : 5px; stroke-dasharray : ${w}, ${2*h+w}; stroke-dashoffset : ${-w-h}`)    
-        }, 100);
-
-        return () => clearTimeout(timer);
+            rect.setAttribute('style', `stroke : ${props.color}; stroke-width : 5px; stroke-dasharray : ${w}, ${2*h+w}; stroke-dashoffset : ${-w-h}`);    
     });
 
 

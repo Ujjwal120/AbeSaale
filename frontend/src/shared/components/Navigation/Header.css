@@ -29,7 +29,7 @@
 
   .gradient-border::after {
     position: absolute;
-    background: #100e17;
+    background: #202022;
     content: "";
     top: calc(var(--border-width));
     left: calc(var(--border-width));

@@ -105,6 +105,7 @@
     animation: C 3.5s infinite ease;
   }
 
+
   @keyframes C {
     0% {
       fill : white;

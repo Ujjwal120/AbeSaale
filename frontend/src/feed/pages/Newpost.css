@@ -20,3 +20,29 @@
     -webkit-transform: scale(1);
 }
 
+.move-up {
+    transform : translateY(-60vh);
+    -webkit-transform : translateY(-60vh);
+    opacity : 0;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+                        opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1); 
+    will-change: transform, opacity;
+}
+
+.nah-down {
+    transform : translateY(0vh);
+    opacity: 1;
+    -webkit-transform : translateY(0vh);
+}
+
+#inside-post-it:hover{
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    cursor: pointer;
+}
+
+.to-image {
+    z-index: 1;
+    object-fit: contain;
+}
